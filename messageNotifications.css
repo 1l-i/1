@@ -1,0 +1,25 @@
+#notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.notification-popup {
+  background: #323232;
+  color: #fff;
+  padding: 14px 24px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.17);
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s, transform 0.4s;
+  pointer-events: all;
+}
+
+.notification-popup.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
