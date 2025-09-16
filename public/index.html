@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Notification demo CSS -->
+    <link rel="stylesheet" href="messageNotifications.css" />
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -30,6 +32,10 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container" style="width: 95%; height: 100%">
+      <!-- Notification Demo Button -->
+      <div style="margin-top: 1rem;">
+        <button onclick="showNotification('New message received!')">Show Notification</button>
+      </div>
       <div class="row" style="height: 100%">
         <div class="one-third column" style="margin-top: 25%">
           <h4><b>Chat</b>, powered by Durable Objects</h4>
@@ -41,6 +47,12 @@
         <div class="two-thirds column" id="root"></div>
       </div>
     </div>
+
+    <!-- Notification Demo Script -->
+    <script type="module">
+      import { showNotification } from './messageNotifications.js';
+      window.showNotification = showNotification;
+    </script>
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
